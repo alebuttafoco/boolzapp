@@ -46,6 +46,15 @@
                 <input type="text" placeholder="Cerca o inizia una nuova chat">
             </div>
 
+            <!-- contacts -->
+            <div class="container_contacts">
+                <div class="contacts" v-for="(el, index) in contacts">
+                    <!-- stampa avat utenti -->
+                    <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
+                    <span class="name_text">{{el.name}}</span>
+                </div>
+            </div>
+
         </aside>
 
         <!-- main -->
