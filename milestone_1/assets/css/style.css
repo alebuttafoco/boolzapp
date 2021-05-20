@@ -6,7 +6,10 @@
 }
 
 body{
-    background-color: #dadbd5;
+    background: linear-gradient(180deg, #009688 11.5%, #D9DBD5 0%);
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .name_text{
@@ -22,6 +25,11 @@ img{
     padding: 5px;
     font-size: 1.5rem;
     color: #b1b1b1;
+}
+
+i,
+.contacts{
+    cursor:pointer;
 }
 
 /* APP */
@@ -63,6 +71,10 @@ img{
 .contact_avatar img{
     width: 70px;
     border-radius: 50%;
+}
+
+.contacts:hover{
+    background-color: #eaeaea;
 }
 
 /* notifiche desktop */
@@ -114,7 +126,7 @@ img{
 
 .search_user .fa-search{
     position: absolute;
-    top: 14px;
+    top: 11px;
     left: 15px;
 }
 
@@ -186,4 +198,12 @@ img{
 /* screen messages */
 .messages{
     padding:0 100px;
+}
+
+.sent{
+    background-color: #d5f9ba;
+}
+
+.received{
+    background-color: #ffffff;
 }
