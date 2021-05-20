@@ -86,7 +86,9 @@
 
             <!-- screen messages -->
             <div class="messages">
-                <div class="message" v-for="(msg, index) in contacts[0].messages">{{msg.text}}</div>
+                <div class="message sent"  v-if="contacts[0].visible"  v-for="(msg, index) in contacts[0].messages">
+                    <p>{{msg.text}}</p>
+                </div>
 
             </div>
 

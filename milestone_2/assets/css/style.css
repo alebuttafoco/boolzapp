@@ -198,12 +198,27 @@ i,
 /* screen messages */
 .messages{
     padding:0 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message{
+    width: fit-content;
 }
 
 .sent{
     background-color: #d5f9ba;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    align-self: flex-end;
 }
 
 .received{
     background-color: #ffffff;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    align-self: flex-start;
 }
