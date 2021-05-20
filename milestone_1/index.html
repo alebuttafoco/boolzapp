@@ -48,8 +48,8 @@
 
             <!-- contacts -->
             <div class="container_contacts">
-                <div class="contacts" v-for="(el, index) in contacts">
-                    <!-- stampa avat utenti -->
+                <!-- stampa avat utenti -->
+                <div class="contacts" v-for="(el, index) in contacts" @click="selectContact(el, index)">
                     <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
                     <span class="name_text">{{el.name}}</span>
                 </div>
@@ -59,6 +59,29 @@
 
         <!-- main -->
         <main id="main">
+
+            <!-- contact chat -->
+            <div class="contact_chat">
+
+                <div class="contact_left_info">
+                    <div class="contact_avatar">
+                        <img :src=" './assets/img/avatar' + activeAvatar + '.jpg' " alt="">
+                    </div>
+                    
+                    <div class="contact_info">
+                        <span class="name_text">{{activeName}}</span>
+                        <span>Ultimo accesso oggi alle</span>
+                    </div>
+                </div>
+
+                <div class="contact_option">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+
+
 
         </main>
 

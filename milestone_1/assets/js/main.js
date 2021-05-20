@@ -159,10 +159,20 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+
+        activeName: "Michele",
+        activeAvatar: "_1",
+        
     },
 
     methods: {
+
+        selectContact(el, index){
+            this.activeName = this.contacts[index].name;
+            this.activeAvatar = this.contacts[index].avatar;
+        },
+
 
     },
 

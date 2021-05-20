@@ -11,7 +11,7 @@ body{
 
 .name_text{
     font-size: 1.2rem;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 /* APP */
@@ -26,10 +26,10 @@ body{
 #side_menu{
     width: calc(100% / 2);
     height: 100%;
+    border-right: 1px solid #b1b1b1;
 }
 
 #main{
-    background-color:tomato; /* temporaneo */
     width: 100%;
     height: 100%;
 }
@@ -40,6 +40,7 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
+    padding: 10px;
 }
 
 .info_user{
@@ -48,17 +49,13 @@ body{
 }
 
 .info_user > img,
-.contacts img{
+.contacts img,
+.contact_avatar img{
     width: 70px;
     border-radius: 50%;
-    margin: 10px;
 }
 
-.icons{
-    margin-right: 10px;
-}
-
-.icons i, .fa-search {
+.icons i, .fa-search, .fa-paperclip, .fa-ellipsis-v{
     padding: 5px;
     font-size: 1.3rem;
     color: #b1b1b1;
@@ -107,18 +104,14 @@ body{
     width: 100%;
     height: 35px;
     border: 1px solid #eaeaea;
-    padding-left: 50px;
+    padding-left: 75px;
     box-shadow: 0px 0.5px 1px 0px lightgray;
 }
 
-.fa-search{
+.search_user .fa-search{
     position: absolute;
     top: 14px;
     left: 15px;
-}
-
-.search_user > input::placeholder{
-    text-align: center;
 }
 
 /* contatti */
@@ -126,9 +119,38 @@ body{
     display: flex;
     border-bottom: 1px solid #eaeaea;
     background-color: white;
+    padding: 10px;
 }
 
 .container_contacts{
     height: 67.8%;
     overflow: auto;
+}
+
+/* MAIN *
+/* contact chat */
+.contact_chat{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 90px;
+}
+
+.contact_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_option i {
+    margin: 5px;
+}
+
+.contact_left_info{
+    display: flex;
+}
+
+.contact_left_info img{
+    margin-right: 15px;
 }
