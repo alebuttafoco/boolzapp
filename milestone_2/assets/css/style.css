@@ -23,6 +23,7 @@ img{
 
 .icons i, .fa-search, .fa-paperclip, .fa-ellipsis-v, .fa-smile, .fa-microphone{
     padding: 5px;
+    margin: 5px;
     font-size: 1.5rem;
     color: #b1b1b1;
 }
@@ -126,7 +127,7 @@ i,
 
 .search_user .fa-search{
     position: absolute;
-    top: 11px;
+    top: 7px;
     left: 15px;
 }
 

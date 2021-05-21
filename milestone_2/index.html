@@ -23,8 +23,8 @@
             <!-- user info -->
             <div class="user">
                 <div class="info_user">
-                    <img src="./assets/img/avatar_io.jpg" alt="">
-                    <span class="name_text">Serena</span>
+                    <img :src=" './assets/img/avatar' + me.avatar + '.jpg'" alt="">
+                    <span class="name_text">{{me.name}}</span>
                 </div>
 
                 <div class="icons">
@@ -68,11 +68,11 @@
 
                 <div class="contact_left_info">
                     <div class="contact_avatar">
-                        <img :src=" './assets/img/avatar' + activeAvatar + '.jpg' " alt="">
+                        <img :src=" './assets/img/avatar' + contacts[activeContact].avatar + '.jpg' " alt="">
                     </div>
                     
                     <div class="contact_info">
-                        <span class="name_text">{{activeName}}</span>
+                        <span class="name_text">{{contacts[activeContact].name}}</span>
                         <span>Ultimo accesso oggi alle</span>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
 
             <!-- screen messages -->
             <div class="messages">
-                <div class="message sent" v-if="contacts[0].visible"  v-for="(msg, index) in contacts[0].messages">
+                <div class="message" v-for="(msg, index) in contacts[activeContact].messages" :class="{'sent' : msg.status == 'sent', received : msg.status == 'received'}" v-if="contacts[activeContact].visible">
                     <p>{{msg.text}}</p>
                 </div>
 
