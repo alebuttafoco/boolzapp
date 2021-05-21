@@ -198,7 +198,6 @@ const app = new Vue({
         newMessage: "",
 
         searchContact: "",
-        
     },
 
     methods: {
@@ -222,7 +221,5 @@ const app = new Vue({
             }, 1000);
                 this.newMessage = "";
         },
-
     },
-
 })
