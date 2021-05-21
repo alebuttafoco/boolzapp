@@ -1,0 +1,238 @@
+/* COMMON RULES */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(180deg, #009688 110px, #D9DBD5 0%);
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.name_text{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+img{
+    margin-right: 15px;
+}
+
+.icons i, .fa-search, .fa-paperclip, .fa-ellipsis-v, .fa-smile, .fa-microphone{
+    padding: 5px;
+    margin: 5px;
+    font-size: 1.5rem;
+    color: #b1b1b1;
+}
+
+i,
+.contacts{
+    cursor:pointer;
+}
+
+/* APP */
+#app{
+    width:1200px;
+    height: 700px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+}
+
+#side_menu{
+    width: calc(100% / 2);
+    height: 100%;
+    border-right: 1px solid #dadada;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+/* ASIDE */
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+.info_user{
+    display: flex;
+    align-items: center;
+}
+
+.info_user > img,
+.contacts img,
+.contact_avatar img{
+    width: 70px;
+    border-radius: 50%;
+}
+
+.contacts:hover{
+    background-color: #eaeaea;
+}
+
+/* notifiche desktop */
+.notify{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    background-color: #8edafc;
+}
+
+.notify i{
+    font-size: 1.3rem;
+    padding: 15px 13px;
+    background-color: white;
+    border-radius: 50%;
+    color: #8edafc;
+}
+
+.text_notify{
+    display: flex;
+    flex-direction: column;
+}
+
+.text_notify a{
+    color: gray;
+    margin-top: 3px;
+}
+
+.text_notify a:active{
+    color: #009688;
+}
+
+.notify span{
+    font-size: 1.2rem;
+
+}
+
+/* cerca utente */
+.search_user{
+    background-color: #fafafa;
+    padding: 10px;
+    position: relative;
+}
+
+.search_user > input{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    padding-left: 75px;
+    font-size: 1rem;
+}
+
+.search_user .fa-search{
+    position: absolute;
+    top: 11px;
+    left: 15px;
+}
+
+/* contatti */
+.contacts{
+    display: flex;
+    border-bottom: 1px solid #f3f3f3;
+    background-color: white;
+    padding: 10px;
+}
+
+.container_contacts{
+    background-color: #fafafa;
+    height: calc(700px - 65px - 90px - 80px);
+    overflow: auto;
+}
+
+/* MAIN *
+/* contact chat */
+.contact_chat{
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 90px;
+}
+
+.contact_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.time{
+    color: #6b7376;
+}
+
+.contact_option i {
+    margin: 5px;
+}
+
+.contact_left_info{
+    display: flex;
+}
+
+.messages{
+    height: calc(100% - 180px);
+    background-image: url(../img/mine.jpg);
+    overflow: auto;
+}
+
+.write_input{
+    height: 90px;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.write_input input{
+    width: 650px;
+    height: 65px;
+    border-radius: 10px;
+    border-style: none;
+    padding-left: 30px;
+    font-size: 1.2rem;
+}
+
+.fa-smile, .fa-microphone{
+    font-size: 1.5rem;
+    color: #6b7376;
+}
+
+/* screen messages */
+.messages{
+    width: 100%;
+    padding:0 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sent,
+.received{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 400px;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+.received{
+    background-color: #ffffff;
+}
