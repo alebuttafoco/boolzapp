@@ -128,7 +128,7 @@ i,
 
 .search_user .fa-search{
     position: absolute;
-    top: 12px;
+    top: 11px;
     left: 15px;
 }
 
@@ -160,6 +160,10 @@ i,
 .contact_info{
     display: flex;
     flex-direction: column;
+}
+
+.time{
+    color: #6b7376;
 }
 
 .contact_option i {
