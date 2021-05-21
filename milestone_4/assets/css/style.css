@@ -140,6 +140,7 @@ i,
 }
 
 .container_contacts{
+    background-color: #eaeaea;
     height: 67.8%;
     overflow: auto;
 }

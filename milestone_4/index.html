@@ -46,13 +46,14 @@
             <!-- cerca utente -->
             <div class="search_user">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" placeholder="Cerca o inizia una nuova chat"
+                v-model="searchContact">
             </div>
 
             <!-- contacts -->
             <div class="container_contacts">
                 <!-- stampa avat utenti -->
-                <div class="contacts" v-for="(el, index) in contacts" @click="selectContact(el, index)">
+                <div class="contacts" v-if="searchContact.toLowerCase() == el.name.toLowerCase()" v-for="(el, index) in contacts" @click="selectContact(el, index)">
                     <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
                     <span class="name_text">{{el.name}}</span>
                 </div>

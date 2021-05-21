@@ -196,6 +196,8 @@ const app = new Vue({
         activeContact: 0,   
         
         newMessage: "",
+
+        searchContact: "",
         
     },
 
@@ -219,15 +221,8 @@ const app = new Vue({
                 })
             }, 1000);
                 this.newMessage = "";
-        }
-        
+        },
+
     },
 
 })
-
-/* messages: [
-    {
-        date: '28/03/2020 10:10:40',
-        text: 'La Marianna va in campagna',
-        status: 'received'
-    }, */
