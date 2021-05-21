@@ -87,7 +87,7 @@
             <!-- screen messages -->
             <div class="messages">
                 <div class="message" v-for="(msg, index) in contacts[activeContact].messages" :class="{'sent' : msg.status == 'sent', received : msg.status == 'received'}" v-if="contacts[activeContact].visible">
-                    <p>{{msg.text}}</p>
+                    <div>{{msg.text}}</div>
                 </div>
 
             </div>

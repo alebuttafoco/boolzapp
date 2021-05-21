@@ -211,7 +211,14 @@ const app = new Vue({
                 text: this.newMessage,
                 status: 'sent',
             })
-            this.newMessage = "";
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push({
+                    date: "",
+                    text: "Okay, a presto! 👍😁",
+                    status: 'received',
+                })
+            }, 1000);
+                this.newMessage = "";
         }
         
     },
