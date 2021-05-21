@@ -206,10 +206,21 @@ const app = new Vue({
         },
 
         writeMessage(){
-            console.log(this.newMessage);
+            this.contacts[this.activeContact].messages.push({
+                date: "",
+                text: this.newMessage,
+                status: 'sent',
+            })
             this.newMessage = "";
         }
         
     },
 
 })
+
+/* messages: [
+    {
+        date: '28/03/2020 10:10:40',
+        text: 'La Marianna va in campagna',
+        status: 'received'
+    }, */
