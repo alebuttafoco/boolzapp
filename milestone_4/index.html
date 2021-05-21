@@ -55,8 +55,8 @@
                 <!-- stampa avat utenti -->
                 <div class="contacts" v-for="(el, index) in contacts"
 
-                v-if="searchContact == el.name.toLowerCase() || searchContact == '' "
-                
+                v-if="searchWord(searchContact, contacts[index].name) || searchContact == '' "
+
                 @click="selectContact(el, index)">
                     <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
                     <span class="name_text"><strong>{{el.name}}</strong></span>

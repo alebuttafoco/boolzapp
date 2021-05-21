@@ -221,5 +221,15 @@ const app = new Vue({
             }, 1000);
                 this.newMessage = "";
         },
+        
+        searchWord(string1, string2){
+            let word = "";
+            for(let i = 0; i <= string1.length; i++){
+                word += string2[i]
+                if (string1 == word){
+                    return string2;
+                }
+            }
+        },
     },
 })
