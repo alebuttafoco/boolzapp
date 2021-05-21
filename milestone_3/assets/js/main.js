@@ -193,7 +193,9 @@ const app = new Vue({
             },
         ],
 
-        activeContact: 0,        
+        activeContact: 0,   
+        
+        newMessage: "",
         
     },
 
@@ -202,6 +204,11 @@ const app = new Vue({
         selectContact(el, index){
             this.activeContact = [index];
         },
+
+        writeMessage(){
+            console.log(this.newMessage);
+            this.newMessage = "";
+        }
         
     },
 
