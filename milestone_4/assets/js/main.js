@@ -228,7 +228,7 @@ const app = new Vue({
                 word += string2[i-1];
             }
             if (string1.toLowerCase() == word.toLowerCase()){
-                console.log(string2);
+                return string2;
             }
         },
     },
