@@ -224,11 +224,11 @@ const app = new Vue({
         
         searchWord(string1, string2){
             let word = "";
-            for(let i = 0; i <= string1.length; i++){
-                word += string2[i]
-                if (string1 == word){
-                    return string2;
-                }
+            for(let i = 1; i <= string1.length; i++){
+                word += string2[i-1];
+            }
+            if (string1.toLowerCase() == word.toLowerCase()){
+                console.log(string2);
             }
         },
     },
