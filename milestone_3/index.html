@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoolzApp</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="app">
+        <!-- side menu -->
+        <aside id="side_menu">
+
+            <!-- user info -->
+            <div class="user">
+                <div class="info_user">
+                    <img :src=" './assets/img/avatar' + me.avatar + '.jpg'" alt="">
+                    <span class="name_text">{{me.name}}</span>
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+
+            <!-- notifiche desktop -->
+            <div class="notify">
+                <i class="fas fa-bell-slash"></i>
+                <div class="text_notify">
+                    <span>Ricevi notifiche di nuovi messaggi</span>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+            </div>
+
+            <!-- cerca utente -->
+            <div class="search_user">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </div>
+
+            <!-- contacts -->
+            <div class="container_contacts">
+                <!-- stampa avat utenti -->
+                <div class="contacts" v-for="(el, index) in contacts" @click="selectContact(el, index)">
+                    <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
+                    <span class="name_text">{{el.name}}</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- main -->
+        <main id="main">
+
+            <!-- contact chat -->
+            <div class="contact_chat">
+
+                <div class="contact_left_info">
+                    <div class="contact_avatar">
+                        <img :src=" './assets/img/avatar' + contacts[activeContact].avatar + '.jpg' " alt="">
+                    </div>
+                    
+                    <div class="contact_info">
+                        <span class="name_text">{{contacts[activeContact].name}}</span>
+                        <span>Ultimo accesso oggi alle</span>
+                    </div>
+                </div>
+
+                <div class="contact_option">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+
+            <!-- screen messages -->
+            <div class="messages">
+                <div class="message" v-for="(msg, index) in contacts[activeContact].messages" :class="{'sent' : msg.status == 'sent', received : msg.status == 'received'}" v-if="contacts[activeContact].visible">
+                    <p>{{msg.text}}</p>
+                </div>
+
+            </div>
+
+            <!-- write input -->
+            <div class="write_input">
+                <i class="far fa-smile"></i>
+                <input type="text" placeholder="Scrivi un messaggio">
+                <i class="fas fa-microphone"></i>
+            </div>
+
+
+
+        </main>
+
+    </div>
+
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
