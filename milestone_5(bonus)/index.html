@@ -76,7 +76,7 @@
                     
                     <div class="contact_info">
                         <span class="name_text">{{contacts[activeContact].name}}</span>
-                        <span class="time">Ultimo accesso oggi alle</span>
+                        <span class="time">Ultimo accesso oggi alle {{lastAccess()}}</span>
                     </div>
                 </div>
 
@@ -91,6 +91,7 @@
             <div class="messages">
                 <div class="message" v-for="(msg, index) in contacts[activeContact].messages" :class="{'sent' : msg.status == 'sent', received : msg.status == 'received'}" v-if="contacts[activeContact].visible">
                     <div>{{msg.text}}</div>
+                    <div class="date">{{msg.date}}</div>
 
                     <!-- IMPLEMENTARE DROPDOWN -->
                     <i class="fas fa-chevron-down" @click="showDropMenu(index)"></i>
@@ -114,6 +115,8 @@
 
     <!-- VueJS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- date.js -->
+    <script src="https://unpkg.com/dayjs"></script>
     <!-- JavaScript -->
     <script src="./assets/js/main.js"></script>
 </body>
