@@ -188,6 +188,8 @@ i,
     overflow: auto;
 }
 
+
+
 .write_input{
     height: 90px;
     background-color: #f3eeea;
@@ -221,7 +223,15 @@ i,
 .message{
     width: fit-content;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+}
+
+.date{
+    text-align: right;
+    font-size: .8rem;
+    color: rgb(161, 161, 161);
+    margin-top: 3px;
 }
 
 .sent,
