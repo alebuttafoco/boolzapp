@@ -36,7 +36,7 @@ i,
 /* APP */
 #app{
     width:1200px;
-    height: 700px;
+    height: 95vh;
     margin: auto;
     margin-top: 20px;
     display: flex;
@@ -146,7 +146,7 @@ i,
 
 .container_contacts{
     background-color: #fafafa;
-    height: calc(700px - 65px - 90px - 80px);
+    height: calc(95vh - 65px - 90px - 80px);
     overflow: auto;
 }
 
