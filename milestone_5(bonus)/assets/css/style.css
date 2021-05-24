@@ -78,6 +78,10 @@ i,
     background-color: #eaeaea;
 }
 
+.bg{
+    background-color: #cacaca !important;
+}
+
 /* notifiche desktop */
 .notify{
     display: flex;

@@ -52,7 +52,9 @@
             <!-- contacts -->
             <div class="container_contacts">
                 <!-- stampa avat utenti -->
-                <div class="contacts" v-for="(el, index) in contacts"
+                <div class="contacts" 
+                v-for="(el, index) in contacts"
+                :class=" {'bg' : index == activeContact} " 
                 v-if="searchWord(searchContact, contacts[index].name) || searchContact == '' "
                 @click="selectContact(el, index)">
                     <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
