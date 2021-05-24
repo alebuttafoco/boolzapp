@@ -35,8 +35,8 @@ i,
 
 /* APP */
 #app{
-    width:1200px;
-    height: 700px;
+    width:1300px;
+    height: 95vh;
     margin: auto;
     margin-top: 20px;
     display: flex;
@@ -146,7 +146,7 @@ i,
 
 .container_contacts{
     background-color: #fafafa;
-    height: calc(700px - 65px - 90px - 80px);
+    height: calc(95vh - 65px - 90px - 80px);
     overflow: auto;
 }
 
@@ -178,11 +178,6 @@ i,
     display: flex;
 }
 
-.messages{
-    height: calc(100% - 180px);
-    background-image: url(../img/mine.jpg);
-    overflow: auto;
-}
 
 .write_input{
     height: 90px;
@@ -208,6 +203,9 @@ i,
 
 /* screen messages */
 .messages{
+    height: calc(100% - 180px);
+    background-image: url(../img/mine.jpg);
+    overflow: auto;
     width: 100%;
     padding:0 80px;
     display: flex;
@@ -218,6 +216,26 @@ i,
     width: fit-content;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.message .fa-chevron-down{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    color: #b1b1b1;
+    padding: 3px;
+    border-radius: 50%;
+    display: none;
+}
+
+/* IMPLEMENTARE DROPDOWN */
+.dropdown{
+
+}
+
+.message:hover .fa-chevron-down{
+    display: block;
 }
 
 .sent,

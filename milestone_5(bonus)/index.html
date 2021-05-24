@@ -90,6 +90,10 @@
             <div class="messages">
                 <div class="message" v-for="(msg, index) in contacts[activeContact].messages" :class="{'sent' : msg.status == 'sent', received : msg.status == 'received'}" v-if="contacts[activeContact].visible">
                     <div>{{msg.text}}</div>
+
+                    <!-- IMPLEMENTARE DROPDOWN -->
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown"></div>
                 </div>
 
             </div>

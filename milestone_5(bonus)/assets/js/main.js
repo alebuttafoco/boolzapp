@@ -198,6 +198,8 @@ const app = new Vue({
         newMessage: "",
 
         searchContact: "",
+
+        chevronDownMenu: false,
     },
 
     methods: {
