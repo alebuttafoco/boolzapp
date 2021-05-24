@@ -231,5 +231,15 @@ const app = new Vue({
                 return string2;
             }
         },
+
+        lastAccess(){
+            let date = 0;
+            this.contacts[this.activeContact].messages.forEach((message)=>{
+                if(message.status == "received"){
+                    date = message.date;
+                }
+            })
+            return date;
+        }
     },
 })
