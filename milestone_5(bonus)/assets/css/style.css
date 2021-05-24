@@ -13,8 +13,11 @@ body{
 }
 
 .name_text{
+    width: 100%;
     font-size: 1.2rem;
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 img{
@@ -224,7 +227,7 @@ i,
     position: relative;
 }
 
-.date{
+.date, .date_contacts{
     text-align: right;
     font-size: .8rem;
     color: rgb(161, 161, 161);
