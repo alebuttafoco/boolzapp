@@ -207,13 +207,13 @@ const app = new Vue({
 
         writeMessage(){
             this.contacts[this.activeContact].messages.push({
-                date: "",
+                date: dayjs(new Date()).format('DD/MM/YYYY HH:mm:ss'),
                 text: this.newMessage,
                 status: 'sent',
             })
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push({
-                    date: "",
+                    date: dayjs(new Date()).format('DD/MM/YYYY HH:mm:ss'),
                     text: "Okay, a presto! 👍😁",
                     status: 'received',
                 })
@@ -224,10 +224,3 @@ const app = new Vue({
     },
 
 })
-
-/* messages: [
-    {
-        date: '28/03/2020 10:10:40',
-        text: 'La Marianna va in campagna',
-        status: 'received'
-    }, */
