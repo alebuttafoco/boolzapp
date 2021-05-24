@@ -223,3 +223,10 @@ i,
     margin: 10px;
     align-self: flex-start;
 }
+
+.date{
+    text-align: right;
+    font-size: .8rem;
+    color: rgb(161, 161, 161);
+    margin-top: 3px;
+}
