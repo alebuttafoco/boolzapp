@@ -233,5 +233,15 @@ const app = new Vue({
                 return string2;
             }
         },
+
+        showDropMenu(index){
+            if (this.chevronDownMenu == false){
+                this.chevronDownMenu = true;
+                console.log(index);
+            } else {
+                this.chevronDownMenu = false;
+                console.log(index);
+            }
+        },
     },
 })

@@ -233,9 +233,16 @@ i,
     display: none;
 }
 
-/* IMPLEMENTARE DROPDOWN */
 .dropdown{
-
+    width: 180px;
+    height: 120px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0px 5px 0px rgb(163, 163, 163);
+    position: absolute;
+    right: 0;
+    top: 20px;
+    z-index: 1;
 }
 
 .message:hover .fa-chevron-down{
