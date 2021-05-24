@@ -77,7 +77,7 @@
                     
                     <div class="contact_info">
                         <span class="name_text">{{contacts[activeContact].name}}</span>
-                        <span class="time">Ultimo accesso oggi alle {{}}</span>
+                        <span class="time">Ultimo accesso oggi alle {{contacts[0].messages[2].date}} </span>
                     </div>
                 </div>
 
@@ -96,7 +96,10 @@
 
                     <!-- IMPLEMENTARE DROPDOWN -->
                     <i class="fas fa-chevron-down" @click="showDropMenu(index)"></i>
-                    <div class="dropdown" v-show="chevronDownMenu"></div>
+                    <div class="dropdown" v-show="chevronDownMenu">
+                        <span>Message info</span>
+                        <span>Delete message</span>
+                    </div>
                 </div>
 
             </div>

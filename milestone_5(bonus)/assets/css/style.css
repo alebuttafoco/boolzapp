@@ -245,8 +245,8 @@ i,
 }
 
 .dropdown{
-    width: 180px;
-    height: 120px;
+    padding: 0 20px;
+    height: 100px;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0px 5px 0px rgb(163, 163, 163);
@@ -254,6 +254,13 @@ i,
     right: 0;
     top: 20px;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.dropdown span{
+    cursor: pointer;
 }
 
 .message:hover .fa-chevron-down{
