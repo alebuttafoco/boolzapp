@@ -58,6 +58,7 @@
                 @click="selectContact(el, index)">
                     <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
                     <span class="name_text">{{el.name}} <span class="date_contacts">{{lastAccessContacts(index)}}</span></span>
+                    <span>{{lastMessage(index)}}</span>
 
                 </div>
             </div>
