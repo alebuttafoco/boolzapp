@@ -53,12 +53,14 @@
             <div class="container_contacts">
                 <!-- stampa avat utenti -->
                 <div class="contacts" v-for="(el, index) in contacts"
-                :class=" {'bg' : index == activeContact} " 
-                v-if="searchWord(searchContact, contacts[index].name) || searchContact == '' "
-                @click="selectContact(el, index)">
-                    <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
-                    <span class="name_text">{{el.name}} <span class="date_contacts">{{lastAccessContacts(index)}}</span></span>
-                    <span>{{lastMessage(index)}}</span>
+                    :class=" {'bg' : index == activeContact} " 
+                    v-if="searchWord(searchContact, contacts[index].name) || searchContact == '' "
+                    @click="selectContact(el, index)">
+                    <img :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
+                    <div class="info_container">
+                        <div class="name_text">{{el.name}} <span class="date_contacts">{{lastAccessContacts(index)}}</span></div>
+                        <div class="last_message">{{lastMessage(index)}}</div>
+                    </div>
 
                 </div>
             </div>

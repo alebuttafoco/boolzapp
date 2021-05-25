@@ -227,6 +227,15 @@ i,
     position: relative;
 }
 
+.info_container{
+    width: 100%;
+}
+
+.last_message{
+    color: #adadad;
+    font-size: .8rem;
+}
+
 .date, .date_contacts{
     text-align: right;
     font-size: .8rem;
