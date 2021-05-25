@@ -234,9 +234,7 @@ const app = new Vue({
             }
         },
 
-        lastAccess() {
-            
-        },
+        
         
         
         showDropMenu(index){
@@ -248,7 +246,5 @@ const app = new Vue({
                 console.log(index);
             }
         },
-        
-        
     },
 })

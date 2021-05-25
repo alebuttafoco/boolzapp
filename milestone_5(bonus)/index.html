@@ -57,7 +57,7 @@
                 v-if="searchWord(searchContact, contacts[index].name) || searchContact == '' "
                 @click="selectContact(el, index)">
                     <img  :src=" './assets/img/avatar' + el.avatar + '.jpg'" alt="">
-                    <span class="name_text">{{el.name}} <span class="date_contacts">{{}}</span></span>
+                    <span class="name_text">{{el.name}} <span class="date_contacts">data</span></span>
 
                 </div>
             </div>
@@ -77,7 +77,7 @@
                     
                     <div class="contact_info">
                         <span class="name_text">{{contacts[activeContact].name}}</span>
-                        <span class="time">Ultimo accesso oggi alle {{contacts[0].messages[2].date}} </span>
+                        <span class="time">Ultimo accesso oggi alle "data" </span>
                     </div>
                 </div>
 
