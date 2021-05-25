@@ -234,7 +234,15 @@ const app = new Vue({
             }
         },
 
-        
+        lastAccessActiveContact(){
+
+            this.contacts[this.activeContact].messages.forEach(message => {
+                if (message.status == "received") {
+                    this.contacts[this.activeContact].lastData = message.date
+                }
+            });
+            return this.contacts[this.activeContact].lastData;
+        },
         
         
         showDropMenu(index){
@@ -247,4 +255,5 @@ const app = new Vue({
             }
         },
     },
+
 })
