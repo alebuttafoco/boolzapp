@@ -83,12 +83,12 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '13/05/2020 14:35:00',
                         text: 'Lo sai che ha aperto una nuova pizzeria?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '14/05/2020 15:00:00',
                         text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     }
@@ -101,12 +101,12 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '4/02/2020 12:30:30',
                         text: 'Hai comprato una nuova auto?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '15/02/2020 05:45:00',
                         text: 'Si, ho trovato un buon affare',
                         status: 'received'
                     }
@@ -119,12 +119,12 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '30/06/2020 19:30:55',
                         text: 'Hai finito gli esami universitari?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '31/06/2020 20:30:00',
                         text: 'Si, devo soltanto preparare la tesi',
                         status: 'received'
                     }
@@ -137,37 +137,37 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '25/07/2020 16:30:25',
                         text: 'Andiamo a prendere un gelato?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '25/07/2020 16:31:00',
                         text: 'Si, so già che gusti prendere :Q_',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '25/07/2020 16:45:00',
                         text: 'Ovvio, come minimo tanto non c\'è',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '25/07/2020 16:58:00',
                         text: 'Ma stai zitto, non la gufare!',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '25/07/2020 17:10:00',
                         text: 'Poi sono povero quindi paghi te',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '25/07/2020 17:25:00',
                         text: 'Vabbè dai',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '25/07/2020 18:10:00',
                         text: 'Allora ci vediamo dopo',
                         status: 'sent'
                     },
@@ -180,12 +180,12 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: '10/05/2020 12:30:55',
                         text: 'Vieni te a prendermi domani?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: '10/05/2020 12:50:00',
                         text: 'Si tranquillo, passo verso le 4!',
                         status: 'received'
                     }
@@ -242,6 +242,15 @@ const app = new Vue({
                 }
             });
             return this.contacts[this.activeContact].lastData;
+        },
+
+        lastAccessContacts(index){
+            this.contacts[index].messages.forEach(message => {
+                if (message.status == "received") {
+                    this.contacts[index].lastAccess = message.date
+                }
+            });
+            return (this.contacts[index].lastAccess); 
         },
         
         
