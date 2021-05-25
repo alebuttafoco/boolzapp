@@ -261,15 +261,22 @@ const app = new Vue({
         
         showDropDown(index){
             this.contacts[this.activeContact].messages.forEach((msg, i) =>{
-                msg.dropdown = false;
-                if (msg.dropdown == false && i == index){
+                if (!msg.dropdown && i == index){
                     msg.dropdown = true;
+                    console.log(msg.dropdown, msg.text);
+                } else if (msg.dropdown && i == index){
+                    msg.dropdown = false;
                 } else {
                     msg.dropdown = false;
+                    console.log(msg.dropdown, msg.text);
                 }
             })
+        },
+
+        deleteMessage(index){
+            this.contacts[this.activeContact].messages.splice(index, 1)
         }
-        
     },
+
 
 })

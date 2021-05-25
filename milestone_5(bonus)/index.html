@@ -99,9 +99,9 @@
 
                     <!-- IMPLEMENTARE DROPDOWN -->
                     <i class="fas fa-chevron-down" @click="showDropDown(index)"></i>
-                    <div class="dropdown" v-show="msg.dropdown">
+                    <div class="dropdown" v-show="true">
                         <span>Message info</span>
-                        <span>Delete message</span>
+                        <span @click="deleteMessage(index)">Delete message</span>
                     </div>
                 </div>
 
