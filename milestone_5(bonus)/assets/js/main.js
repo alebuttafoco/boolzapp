@@ -252,6 +252,13 @@ const app = new Vue({
             });
             return (this.contacts[index].lastAccess); 
         },
+
+        lastMessage(index){
+            this.contacts[index].messages.forEach(message => {
+                    this.contacts[index].lastMsg = message.text
+            });
+            return (this.contacts[index].lastMsg);
+        },
         
         
         showDropMenu(index){
