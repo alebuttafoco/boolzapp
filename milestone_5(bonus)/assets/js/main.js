@@ -199,7 +199,6 @@ const app = new Vue({
 
         searchContact: "",
 
-        chevronDownMenu: false,
     },
 
     methods: {
@@ -260,16 +259,17 @@ const app = new Vue({
             return (this.contacts[index].lastMsg);
         },
         
+        showDropDown(index){
+            this.contacts[this.activeContact].messages.forEach((msg, i) =>{
+                msg.dropdown = false;
+                if (msg.dropdown == false && i == index){
+                    msg.dropdown = true;
+                } else {
+                    msg.dropdown = false;
+                }
+            })
+        }
         
-        showDropMenu(index){
-            if (this.chevronDownMenu == false){
-                this.chevronDownMenu = true;
-                console.log(index);
-            } else {
-                this.chevronDownMenu = false;
-                console.log(index);
-            }
-        },
     },
 
 })

@@ -98,8 +98,8 @@
                     <div class="date">{{msg.date}}</div>
 
                     <!-- IMPLEMENTARE DROPDOWN -->
-                    <i class="fas fa-chevron-down" @click="showDropMenu(index)"></i>
-                    <div class="dropdown" v-show="chevronDownMenu">
+                    <i class="fas fa-chevron-down" @click="showDropDown(index)"></i>
+                    <div class="dropdown" v-show="msg.dropdown">
                         <span>Message info</span>
                         <span>Delete message</span>
                     </div>
