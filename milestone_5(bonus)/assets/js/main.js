@@ -263,14 +263,14 @@ const app = new Vue({
             this.contacts[this.activeContact].messages.forEach((msg, i) =>{
                 if (!msg.dropdown && i == index){
                     msg.dropdown = true;
-                    console.log(msg.dropdown, msg.text);
                 } else if (msg.dropdown && i == index){
                     msg.dropdown = false;
                 } else {
                     msg.dropdown = false;
-                    console.log(msg.dropdown, msg.text);
                 }
             })
+            console.log(this.contacts[this.activeContact].messages[index].dropdown);
+            return this.contacts[this.activeContact].messages[index].dropdown;
         },
 
         deleteMessage(index){
