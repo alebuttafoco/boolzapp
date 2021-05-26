@@ -273,7 +273,6 @@ const app = new Vue({
                     msg.dropdown = false;
                 }
             })
-            console.log(this.contacts[this.activeContact].messages[index].dropdown);
             return this.contacts[this.activeContact].messages[index].dropdown;
         },
 
