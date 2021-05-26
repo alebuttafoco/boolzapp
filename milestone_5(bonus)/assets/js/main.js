@@ -199,6 +199,8 @@ const app = new Vue({
 
         searchContact: "",
 
+        counterDrop: null,
+
     },
 
     methods: {
@@ -263,7 +265,9 @@ const app = new Vue({
             this.contacts[this.activeContact].messages.forEach((msg, i) =>{
                 if (!msg.dropdown && i == index){
                     msg.dropdown = true;
+                    this.counterDrop = i;
                 } else if (msg.dropdown && i == index){
+                    this.counterDrop = null;
                     msg.dropdown = false;
                 } else {
                     msg.dropdown = false;
